@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estevao Silva</title>
+    <style>
+        /* CSS */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #005bbb; /* azul moderno */
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00; /* amarelo moderno */
+        }
+
+        /* Carrossel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 80px; /* para o menu fixo não cobrir o carrossel */
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-nav button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .carousel-nav button:hover {
+            color: #ffcc00; /* amarelo moderno */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- Carrossel -->
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <div class="carousel-item">
+            <img src="image1.png" alt="Projeto 1">
+            <div class="caption">
+                <h2>Projeto 1</h2>
+                <p>Descrição curta do projeto</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image2.png" alt="Projeto 2">
+            <div class="caption">
+                <h2>Projeto 2</h2>
+                <p>Descrição curta do projeto</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image3.png" alt="Projeto 3">
+            <div class="caption">
+                <h2>Projeto 3</h2>
+                <p>Descrição curta do projeto</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="image4.png" alt="Projeto 4">
+          <div class="caption">
+              <h2>Projeto 4</h2>
+              <p>Descrição curta do projeto</p>
+          </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</div>
+
+<!-- Seção de Depoimentos -->
+<section id="depoimentos" class="depoimentos">
+  <div class="container">
+      <h2>O que dizem sobre mim</h2>
+      <div class="depoimento">
+          <p>"Trabalhar com Estevão foi uma experiência fantástica! Ele conseguiu capturar a essência do meu negócio em um design incrível!"</p>
+          <span>- João Silva, CEO da Empresa X</span>
+      </div>
+      <div class="depoimento">
+          <p>"Excelente trabalho no desenvolvimento do nosso site. Ele fez tudo funcionar perfeitamente e entregou tudo no prazo!"</p>
+          <span>- Maria Souza, Diretora da Empresa Y</span>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* Estilo da seção de depoimentos */
+  .depoimentos {
+      padding: 60px 0;
+      background-color: #ffffff;
+      text-align: center;
+  }
+
+  .depoimentos h2 {
+      font-size: 36px;
+      color: #005bbb;
+      margin-bottom: 40px;
+  }
+
+  .depoimento {
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #555;
+  }
+
+  .depoimento span {
+      font-size: 16px;
+      color: #888;
+      margin-top: 10px;
+      display: block;
+  }
+</style>
+
+
+<!-- Rodapé Fixado -->
+<div class="footer">
+  <div class="footer-content">
+      <div class="footer-links">
+          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://github.com" target="_blank">GitHub</a>
+          <a href="mailto:exemplo@email.com">Email</a>
+      </div>
+      <p>&copy; 2025 Estevao Silva. Todos os direitos reservados.</p>
+  </div>
+</div>
+
+
+
+<style>
+  /* Estilo do rodapé fixo */
+  .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #005bbb; /* Azul moderno */
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      z-index: 1000;
+  }
+
+  .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+  }
+
+  .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+      color: #ffcc00; /* Amarelo moderno */
+  }
+
+  .footer p {
+      margin: 0;
+      font-size: 14px;
+  }
+</style>
+
+<script>
+// JavaScript para o carrossel
+let index = 0;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.carousel-item');
+    if (n >= slides.length) index = 0;
+    if (n < 0) index = slides.length - 1;
+    document.querySelector('.carousel-slide').style.transform = `translateX(-${index * 100}%)`;
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+    index++;
+    showSlide(index);
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index--;
+    showSlide(index);
+});
+
+// Auto-rotate
+setInterval(() => {
+    index++;
+    showSlide(index);
+}, 5000);
+</script>
+
+</body>
+</html>
